@@ -1,0 +1,27 @@
+.logo {
+  width: 100px;
+}
+
+.logo:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.logo:active {
+  transform: scale(0.9);
+}
+
+.nupp {
+  background-color: snow;
+  border-radius: 5px;
+}
+
+.nupp:hover {
+  background-color: beige;
+  cursor: pointer;
+}
+
+.nupp:active {
+  background-color: azure;
+  text-decoration: underline;
+}

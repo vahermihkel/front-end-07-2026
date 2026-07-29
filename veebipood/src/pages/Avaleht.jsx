@@ -1,7 +1,32 @@
+import { useState } from "react"
 
 function Avaleht() {
+  const [kogus, setKogus] = useState(0);
+  const [sonum, setSonum] = useState("Muuda kogust!");
+
+  function nulli() {
+    setKogus(0);
+    setSonum("Kogus nullitud");
+  }
+
+  function vahenda() {
+    setKogus(kogus - 1);
+    setSonum("Kogus vähendatud");
+  }
+
+  function suurenda() {
+    setKogus(kogus + 1);
+    setSonum("Kogus suurendatud");
+  }
+
   return (
-    <div>Avaleht</div>
+    <div>
+      <div>{sonum}</div>
+      {kogus > 0 && <button onClick={nulli}>Nulli</button>}
+      <button disabled={kogus <= 0} onClick={vahenda}>-</button>
+      <span>{kogus}</span>
+      <button onClick={suurenda}>+</button>
+    </div>
   )
 }
 
